@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Jaymee Rose | Portfolio</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Animated Background Layer -->
+<div class="animated-bg"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#journey" class="nav-link">Journey</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <div class="bg-deco bg-blob"></div>
+
+    <!-- HOME -->
+    <section id="home">
+        <div class="home-shape"></div><div class="home-shape s2"></div>
+        <div class="container">
+            <div class="home-wrapper">
+                <div class="home-text">
+                    <h1 th:text="${studentName}">Jaymee Rose C. Bolisay</h1>
+                    <h2 th:text="${course}">BS Information Technology - 2nd Year</h2>
+                    <h3 th:text="${campus}">NEUST Peñaranda Off Campus</h3>
+                    <p>Hello! I'm Jaymee Rose, a passionate 2nd year BSIT student exploring the exciting world of web development and technology. Welcome to my digital space where I document my learning journey!</p>
+                    <a href="#about" class="btn">Discover More</a>
+                </div>
+                <div class="profile-frame">
+                    <img th:src="@{/images/prof.jpg}" src="../static/images/prof.jpg" alt="Profile" onerror="this.src='https://via.placeholder.com/260/c41e3a/ffffff?text=JR'">
+                </div>
+            </div>
+        </div>
+        <!-- Background Decorations -->
+<div class="bg-shapes-container">
+  <div class="bg-shp circle"></div>
+  <div class="bg-shp diamond"></div>
+  <div class="bg-shp blob"></div>
+  <div class="bg-shp dot"></div>
+  <div class="bg-shp ring"></div>
+</div>
+
+<!-- Glass Panel with Reflection -->
+<div class="glass-bg-panel">
+  <div class="glass-reflection"></div>
+</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-section">
+                    <h3>Short Bio</h3><div class="divider"></div>
+                    <p>I'm Jaymee Rose, a 20-year-old second-year BSIT student currently learning about technology and web development. I'm still exploring different areas in IT and discovering what I enjoy most while continuing to improve my skills.</p>
+                </div>
+                <div class="about-section highlight-brn">
+                    <h3>Why BSIT?</h3><div class="divider"></div>
+                    <p>BSIT wasn't my first choice since I originally wanted to take Psychology. However, I chose this course because it offers more practical opportunities, especially when it comes to job stability and income in the future.</p>
+                </div>
+                <div class="about-section">
+                    <h3>Interests & Hobbies</h3><div class="divider"></div>
+                    <p>When I'm not coding or working on school tasks, I usually spend my time watching Thai series and Chinese dramas. I also enjoy playing Mobile Legends: Bang Bang as a way to relax and unwind.</p>
+                    <div class="hobbies">
+                        <span class="hobby-tag">Kpop & OPM Music</span><span class="hobby-tag">K-Dramas & Movies</span><span class="hobby-tag">Reading Wattpad</span>
+                        <span class="hobby-tag">Coffee Breaks</span><span class="hobby-tag">Digital Art</span><span class="hobby-tag">Playing ML & Roblox</span>
+                    </div>
+                </div>
+                <div class="about-section highlight-red">
+                    <h3>Goals</h3><div class="divider"></div>
+                    <p><em>"Keeping them under wraps for now."</em></p>
+                    <p>For now: Pass all subjects, build real projects, and fully enjoy the college experience.</p>
+                </div>
+                <div class="about-section photos-section">
+                    <h3>Student Life</h3><div class="divider"></div>
+                    <div class="photos-grid">
+                        <div class="photo-item" data-hover="red" onclick="openLB(this)">
+                            <img th:src="@{/images/camp.jpg}" src="../static/images/camp.jpg"  onerror="this.src='https://via.placeholder.com/340x200/c41e3a/ffffff?text=Study'">
+                        </div>
+                        <div class="photo-item" data-hover="brown" onclick="openLB(this)">
+                            <img th:src="@{/images/umeet.jpg}" src="../static/images/umeet.jpg"  onerror="this.src='https://via.placeholder.com/340x200/8b4513/ffffff?text=Campus'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section id="journey">
+        <div class="container">
+            <h2 class="section-title">My College Journey</h2>
+            <div class="journey-content">
+                <div class="journey-section">
+                    <h3>Memorable Experience</h3><div class="divider"></div>
+                    <p>Building a desktop application with my team was memorable. We spent countless hours debugging, brainstorming features, and finally presenting our project. The sense of accomplishment when it finally worked and the recognition we received was worth it.”</p>
+                </div>
+                <div class="journey-section highlight-brn">
+                    <h3>Biggest Challenge</h3><div class="divider"></div>
+                    <p>Health issue and finishing the project. During first year, ending of 1st sem til 2nd sem finals, I was unable to walk properly due to an accident. The challenging part was to act normally even when something was bothering you.You had to know what deserved more focus and needed to be finished—especially the project, particularly if you had a major role in it.</p>
+                </div>
+                <div class="journey-section highlight-red">
+                    <h3>What I've Learned</h3><div class="divider"></div>
+                    <ul class="journey-list">
+                        <li><strong>Health comes first, no grade is worth sacrificing your well-being.</strong></li>
+                    </ul>
+                </div>
+                <div class="journey-section photos-section">
+                    <h3>Journey Moments</h3><div class="divider"></div>
+                    <div class="square-photos-grid">
+                        <div class="square-photo" data-hover="dark" onclick="openLB(this)">
+                            <img th:src="@{/images/html.jpg}" src="../static/images/html.jpg" alt="HTML Learning" data-title="HTML Learning"  onerror="this.src='https://via.placeholder.com/260x260/222/ffffff?text=HTML'">
+                        </div>
+                        <div class="square-photo" data-hover="red" onclick="openLB(this)">
+                            <img th:src="@{/images/hs.webp}" src="../static/images/hs.webp" alt="Awarding"  onerror="this.src='https://via.placeholder.com/260x260/c41e3a/ffffff?text=Project'">
+                        </div>
+                        <div class="square-photo" data-hover="brown" onclick="openLB(this)">
+                            <img th:src="@{/images/cert.jpg}" src="../static/images/cert.jpg" alt="Certificate" data-title="Achievement" onerror="this.src='https://via.placeholder.com/260x260/8b4513/ffffff?text=Certificate'">
+                        </div>
+                        <div class="square-photo" data-hover="dark" onclick="openLB(this)">
+                            <img th:src="@{/images/genclean.jpg}" src="../static/images/genclean.jpg"  onerror="this.src='https://via.placeholder.com/260x260/222/ffffff?text=Study'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills & Interests</h2>
+            <div class="skills-category">
+                <h3>💻 Programming Skills</h3><div class="divider"></div>
+                <div class="skills-grid">
+                    <div class="skill-card"><div class="skill-icon">🌐</div><h4>Java</h4><p>Object-oriented programming, backend logic.</p></div>
+                    <div class="skill-card"><div class="skill-icon">📝</div><h4>HTML</h4><p>Building web pages and desktop app.</p></div>
+                    <div class="skill-card"><div class="skill-icon">🎨</div><h4>CSS</h4><p>Styling layouts, responsive design, and visual effects.</p></div>
+                    <div class="skill-card"><div class="skill-icon">⚡</div><h4>JavaScript</h4><p>Interactive web features, DOM manipulation, and basic logic.</p></div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3>🎮 Other Interests</h3><div class="divider"></div>
+                <div class="interests-grid">
+                    <div class="interest-card"><div class="interest-icon">🎮</div><h4>ML & Roblox</h4></div>
+                    <div class="interest-card"><div class="interest-icon">💃</div><h4>Dancing</h4></div>
+                    <div class="interest-card"><div class="interest-icon">🎵</div><h4>Music</h4></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <div class="container">
+            <h2 class="section-title">Student Life Moments</h2>
+            <p class="gallery-subtitle">Capturing memories, one frame at a time</p>
+            <div class="creative-gallery">
+                <div class="gallery-row">
+                    <div class="gallery-item item-portrait" data-hover="red" onclick="openLB(this)">
+                        <img th:src="@{/images/food.jpg}" src="../static/images/food.jpg" alt="Foodtrip" class="gallery-img" data-title="Foodtrip" data-desc="Meet and eat with friends" onerror="this.src='https://via.placeholder.com/300x400/c41e3a/ffffff?text=Foodtrip'">
+                        <div class="gallery-overlay"><div class="overlay-content"><h3>Foodtrip</h3><p>Meet and eat.</p></div></div>
+                    </div>
+                    <div class="gallery-item item-square" data-hover="brown" onclick="openLB(this)">
+                        <img th:src="@{/images/part.jpg}" src="../static/images/part.jpg" alt="Honorific Award" class="gallery-img" data-title="Campus Night Party" data-desc="Celebrating with friends" onerror="this.src='https://via.placeholder.com/300x300/8b4513/ffffff?text=Award'">
+                        <div class="gallery-overlay"><div class="overlay-content"><h3>Campus Night Party</h3><p></p></div></div>
+                    </div>
+                    <div class="gallery-item item-portrait" data-hover="dark" onclick="openLB(this)">
+                        <img th:src="@{/images/group.jpg}" src="../static/images/group.jpg" alt="Late Night Session" class="gallery-img" data-title="Late Night Session" data-desc="Doing assignment with friends" onerror="this.src='https://via.placeholder.com/300x400/222/ffffff?text=Late+Night'">
+                        <div class="gallery-overlay"><div class="overlay-content"><h3>Late Night Session</h3><p>Doing assignment with friends</p></div></div>
+                    </div>
+                </div>
+                <div class="gallery-row featured-row">
+                    <div class="gallery-item item-featured" data-hover="red" onclick="openLB(this)">
+                        <div class="featured-badge">✨✨✨</div>
+                        <img th:src="@{/images/def2.jpg}" src="../static/images/def2.jpg" alt="Certificate Awarding" class="gallery-img" data-title="1st year Pre-Defense" data-desc="Congratulations, we got individual and group certificates!" onerror="this.src='https://via.placeholder.com/900x500/c41e3a/ffffff?text=Certificate'">
+                        <div class="gallery-overlay featured-overlay"><div class="overlay-content"><h3>1st year Pre-Defense</h3><p>Congratulations, we got individual and group certificates!</p></div></div>
+                    </div>
+                </div>
+                <div class="gallery-row">
+                    <div class="gallery-item item-square" data-hover="brown" onclick="openLB(this)">
+                        <img th:src="@{/images/con.jpg.jpg}" src="../static/images/con.jpg.jpg" alt="Dance Performance" class="gallery-img" data-title="Dance Performance" data-desc="Minor subject Performance" onerror="this.src='https://via.placeholder.com/300x300/8b4513/ffffff?text=Dance'">
+                        <div class="gallery-overlay"><div class="overlay-content"><h3>Dance Performance</h3><p>Minor subject Performance</p></div></div>
+                    </div>
+                    <div class="gallery-item item-portrait" data-hover="dark" onclick="openLB(this)">
+                        <img th:src="@{/images/hon.jpg}" src="../static/images/hon.jpg" alt="Honorific" class="gallery-img" data-title="Honorific Society" data-desc="Proud moment of recognition" onerror="this.src='https://via.placeholder.com/300x400/222/ffffff?text=Party'">
+                        <div class="gallery-overlay"><div class="overlay-content"><h3>Honorific Society</h3><p></p></div></div>
+                    </div>
+                    <div class="gallery-item item-square" data-hover="red" onclick="openLB(this)">
+                        <img th:src="@{/images/td.jpg}" src="../static/images/td.jpg" alt="After Training" class="gallery-img" data-title="After Training" data-desc="Foodtrip after training" onerror="this.src='https://via.placeholder.com/300x300/c41e3a/ffffff?text=Foodtrip'">
+                        <div class="gallery-overlay"><div class="overlay-content"><h3>After Training</h3><p>Foodtrip after training</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" onclick="closeLB()">×</button>
+        <button class="lightbox-nav lightbox-prev" onclick="changeLB(-1)">❮</button>
+        <button class="lightbox-nav lightbox-next" onclick="changeLB(1)">❯</button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightbox-img">
+            <div class="lightbox-caption"><h3 id="lightbox-title">Title</h3><p id="lightbox-desc">Description</p></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Jaymee Rose C. Bolisay | NEUST Peñaranda</p>
+        <div class="footer-links"><a href="#">Facebook</a><a href="#">Instagram</a><a href="#">GitHub</a><a href="#">Email</a></div>
+    </footer>
+
+    <script th:src="@{/js/script.js}"></script>
+    <script>
+        function openLB(el) {
+            const lightbox = document.getElementById('lightbox');
+            const img = el.querySelector('img');
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-img').alt = img.alt;
+            document.getElementById('lightbox-title').textContent = img.dataset.title || el.querySelector('.overlay-content h3')?.textContent || img.alt || 'Photo';
+            document.getElementById('lightbox-desc').textContent = img.dataset.desc || el.querySelector('.overlay-content p')?.textContent || '';
+            lightbox.classList.add('active'); document.body.style.overflow = 'hidden';
+            const allPhotos = document.querySelectorAll('.photo-item[onclick], .square-photo[onclick], .gallery-item[onclick]');
+            lightbox.dataset.currentIndex = Array.from(allPhotos).indexOf(el);
+        }
+        function closeLB() { document.getElementById('lightbox').classList.remove('active'); document.body.style.overflow = ''; }
+        function changeLB(dir) {
+            const lightbox = document.getElementById('lightbox');
+            const allPhotos = document.querySelectorAll('.photo-item[onclick], .square-photo[onclick], .gallery-item[onclick]');
+            let idx = parseInt(lightbox.dataset.currentIndex || 0) + dir;
+            if (idx < 0) idx = allPhotos.length - 1;
+            if (idx >= allPhotos.length) idx = 0;
+            openLB(allPhotos[idx]); lightbox.dataset.currentIndex = idx;
+        }
+        document.getElementById('lightbox')?.addEventListener('click', e => e.target.id === 'lightbox' && closeLB());
+        document.addEventListener('keydown', e => { if(e.key==='Escape') closeLB(); if(e.key==='ArrowLeft') changeLB(-1); if(e.key==='ArrowRight') changeLB(1); });
+
+        const sections = document.querySelectorAll('section'); const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => { let c=''; sections.forEach(s => pageYOffset >= s.offsetTop-100 && (c=s.id)); navLinks.forEach(l => { l.classList.remove('active'); if(l.getAttribute('href').slice(1)===c) l.classList.add('active'); }); });
+        document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', e => { e.preventDefault(); const t=document.querySelector(l.getAttribute('href')); if(t) window.scrollTo({top:t.offsetTop-70,behavior:'smooth'}); }));
+    </script>
+</body>
+</html>
